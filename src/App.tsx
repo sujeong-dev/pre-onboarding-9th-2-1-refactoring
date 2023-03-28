@@ -1,6 +1,5 @@
-import { ProductProvider } from './contexts/ProductContext';
 import Router from './router/Router';
-import { radioTheme } from './style/customTheme';
+import { radioTheme } from './styles/customTheme';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 export const theme = extendTheme({
@@ -10,9 +9,7 @@ export const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <ProductProvider>
-        <Router />
-      </ProductProvider>
+      <Router />
     </ChakraProvider>
   );
 }
